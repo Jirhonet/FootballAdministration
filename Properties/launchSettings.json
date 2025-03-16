@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "FootballAdministration (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "FootballAdministration (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
