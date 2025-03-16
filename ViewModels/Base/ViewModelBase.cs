@@ -1,7 +1,8 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
-using FootballAdministration.Services.Base;
-using System;
+﻿using System;
 using System.Threading.Tasks;
+using CommunityToolkit.Mvvm.ComponentModel;
+using FootballAdministration.Services.Base;
+using Microsoft.UI.Xaml.Controls;
 
 namespace FootballAdministration.ViewModels.Base
 {
@@ -18,10 +19,15 @@ namespace FootballAdministration.ViewModels.Base
         public DialogService DialogService
             => dialogService;
         #endregion
-        
+
         public virtual void OnViewLoaded()
         {
             //
+        }
+
+        protected Task<ContentDialogResult> ShowError(Exception ex)
+        {
+            return DialogService.ShowDialogAsync("Error", ex.Message, "OK");
         }
     }
 }

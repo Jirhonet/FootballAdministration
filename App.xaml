@@ -3,14 +3,16 @@
     x:Class="FootballAdministration.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:FootballAdministration">
+    xmlns:local="using:FootballAdministration"
+    xmlns:converters="using:FootballAdministration.Converters">
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls" />
+                <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls"/>
                 <!-- Other merged dictionaries here -->
             </ResourceDictionary.MergedDictionaries>
             <!-- Other app resources here -->
+            <converters:NotNullToBooleanConverter x:Key="NotNullToBooleanConverter"/>
         </ResourceDictionary>
     </Application.Resources>
 </Application>
